@@ -1,7 +1,7 @@
 // @flow
-
 import * as React from "react";
 
+import Navigation from "components/navigation";
 import Users from "components/users";
 import Home from "components/home";
 
@@ -23,6 +23,7 @@ export function App({ currentPageName } :
   // Return the component structure in HTML
   return (
     <div>
+      <Navigation />
       { content }
     </div>
   );
