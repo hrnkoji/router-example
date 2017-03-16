@@ -24,7 +24,6 @@ export function startRouters() {
 
   usersRouter((ctx) => {
     logger.debug("Users route");
-    getUsers().then(onUsersFromNetwork);
     store.dispatch(updateCurrentPageAction({ name: "USERS_PAGE" }));
   });
 
