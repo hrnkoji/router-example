@@ -6,10 +6,9 @@ import * as React from "react";
 import { getLogger } from "domain/logger";
 
 import { store } from "domain/store/main";
-import { startRouters } from "domain/middleware/router";
 import type { State } from "domain/store/state/main";
 
-import { App } from "components/app";
+import { StartRouters } from "components/start_routers";
 
 // import stylesheets
 require("style/main.scss");
@@ -32,7 +31,7 @@ function render() : void {
 
   // Pass all props to the App component, and render to the target DOM element.
   ReactDOM.render(
-    <App text={text} currentPageName={currentPageName} />,
+    <StartRouters />,
     document.getElementById("app")
   );
 
@@ -44,10 +43,6 @@ function render() : void {
 // Subscribe to the store and to ensure it will re-render your app
 // whenever there is a store update.
 store.subscribe(render);
-
-// Start routing
-// @see domain/middleware/router.js
-startRouters();
 
 // Start hot module
 if (module.hot) {
