@@ -22,12 +22,12 @@ function defaultRouter(onRoute : OnRoute) {
 
 export function startRouters() {
 
-  usersRouter((ctx) => {
+  usersRouter(() => {
     logger.debug("Users route");
     store.dispatch(updateCurrentPageAction({ name: "USERS_PAGE" }));
   });
 
-  defaultRouter((ctx) => {
+  defaultRouter(() => {
     logger.debug("Default route");
     store.dispatch(updateCurrentPageAction({ name: "HOME_PAGE" }));
   });
