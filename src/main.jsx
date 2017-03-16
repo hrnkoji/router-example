@@ -29,11 +29,10 @@ function render() : void {
   // Select your props from the state
   const text = "hello";
   const currentPageName = state.currentPage.name;
-  const users = state.users;
 
   // Pass all props to the App component, and render to the target DOM element.
   ReactDOM.render(
-    <App text={text} currentPageName={currentPageName} users={users} />,
+    <App text={text} currentPageName={currentPageName} />,
     document.getElementById("app")
   );
 

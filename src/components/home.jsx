@@ -1,10 +1,10 @@
 // @flow
 import React from 'react';
 
-export default function Users() {
+export default function Home() {
   return (
     <div>
-      <h1>Users</h1>
+      <h1>Home</h1>
     </div>
   );
 }
